@@ -45,7 +45,7 @@ public final class SpongeCommands {
                         ImmutableMap.of("player", Text.of(user.getName()), "count", Text.of(info.getCount() + ""))
                 );
                 cs.sendMessage(SpongeProcessor.getFormattedText(status.getMessage()));
-                if (status.equals(Status.SUCCESS) && cs.getName().equals(user.getName()) /* 바로 equals 써도 되나 */) {
+                if (status.equals(Status.SUCCESS) && cs.getName().equals(user.getName())) {
                     info.setLastCheck(System.currentTimeMillis());
                     AttendServices.getProcessor().launchCommand(
                             AttendServices.getFileManager()
@@ -123,9 +123,4 @@ public final class SpongeCommands {
     public static CommandExecutor newRankingCommand() {
         return new RankingCmd();
     }
-
-     /*
-     왜 new 로 했냐면 private static 선언은 lazy 초기화가 안 되기 때문에 이를 버킷에서 실행 시
-     오류가 발생할 것 같았기 때문, 뭐 해봐야 아는 일이지만.
-      */
 }
