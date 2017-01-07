@@ -42,5 +42,5 @@ public class FilesManager implements Reloadable, Savable {
 
     public void setDataDir(File dir) {
         dataDir = dir;
-    } // 나중에 ServerType에 Supplier로 얻게 해야하나.
+    }
 }
