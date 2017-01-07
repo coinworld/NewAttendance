@@ -13,7 +13,7 @@ commands:
                 permission: attendance.check
                 aliases: dcrank
                 usage: |
-                        사용법: /<command>
+                        사용법: /<command> [페이지 숫자]
 permissions:
         attendance.dc:
                 default: true
