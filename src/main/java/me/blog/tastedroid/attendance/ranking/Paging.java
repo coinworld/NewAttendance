@@ -34,7 +34,7 @@ public class Paging<T> {
         T[] array = (T[]) Array.newInstance(clazz, num);
 
         if (list.isEmpty()) {
-            // have nothing to do.
+            
         } else if (list.size() < num) {
             for (ListIterator<T> iter = list.listIterator(); iter.hasNext(); ) {
                 int index = iter.nextIndex();
