@@ -1,0 +1,21 @@
+name: Attendance
+main: me.blog.tastedroid.attendance.BukkitMain
+version: 0.1e
+commands:
+        attend:
+                description: 출석을 확인합니다.
+                permission: attendance.dc
+                aliases: [dailycheck, dc]
+                usage: |
+                        사용법: /<command> [플레이어 이름]
+        attendrank:
+                description: 출석 랭크를 확인합니다.
+                permission: attendance.check
+                aliases: dcrank
+                usage: |
+                        사용법: /<command>
+permissions:
+        attendance.dc:
+                default: true
+        attendance.check:
+                default: true
